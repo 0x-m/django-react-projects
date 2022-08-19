@@ -1,5 +1,5 @@
 from notes.models import *
-from serializers import NoteSerializer, TagSerializer
+from .serializers import NoteSerializer, TagSerializer
 from rest_framework import viewsets
 from rest_framework import permissions
 from django_filters.rest_framework.backends import DjangoFilterBackend

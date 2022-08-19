@@ -27,16 +27,37 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     
     #apps-----------------
     "notes",
     #---------------------
     
     #3rd------------------
-    "rest_frameowkr",
+    "rest_framework",
+    "rest_framework.authtoken",
     "django_filters",
+    "corsheaders",
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+
     #---------------------
 ]
+
+SITE_ID = 1
+
+CSRF_TRUSTED_ORGINS = [
+    "http://localhost:3000"
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:8000"
+]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

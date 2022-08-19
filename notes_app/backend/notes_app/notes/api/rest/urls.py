@@ -7,3 +7,4 @@ router = DefaultRouter()
 router.register(r'notes',NoteViewset, basename='notes')
 router.register(r'tags', TagViewset, basename='tags')
 
+urlpatterns = router.urls
