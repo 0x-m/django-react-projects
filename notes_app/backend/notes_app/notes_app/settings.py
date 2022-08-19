@@ -28,7 +28,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     
+    #apps-----------------
     "notes",
+    #---------------------
+    
+    #3rd------------------
+    "rest_frameowkr",
+    "django_filters",
+    #---------------------
 ]
 
 MIDDLEWARE = [
