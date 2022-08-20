@@ -1,0 +1,39 @@
+{% extends './dashboard/dashboard.html' %}
+{% load static %}
+
+
+{% block title %}Notes{% endblock %}
+
+
+{% block content %}
+
+<template id="add-edit-note">
+
+</template>
+
+<section class="flex justify-end mt-4">
+    <button class="flex gap-1 m-4 p-2 hover:bg-slate-100 rounded items-center">
+        <i class="bi-plus text-4xl text-green-600"></i>
+        <span class="text-xl text-gray-600">Add a Note</span>
+    </button>
+</section>
+<form class="w-full flex-col gap-2">
+    <section class="mt-12 w-11/12 p-2  text-sm font-extrabold text-gray-800 flex gap-1 flex-wrap mx-auto">
+        {% for tag in user.tags.all %}
+        <label class="select-none cursor-pointer p-2">
+            <input type="checkbox" name="tags" value="{{tag.name}}" class="peer hidden"
+                {% if tag.name in selected_tags %}checked{% endif %}>
+            <span class="peer-checked:bg-sky-600 peer-checked:text-white p-2 rounded">{{tag.name}}</span>
+        </label>
+        {% endfor %}
+    </section>
+    <div class="flex p-4 mt-2 justify-end">
+        <button type="submit" class="p-2 text-white rounded shadow text-sm px-4 bg-gray-600">Apply tags</button>
+    </div>
+</form>
+<section class="mt-8 gap-2  p-4 grid grid-cols-1 md:grid-cols-4 flex-wrap w-full">
+    {% for note in notes %}
+    {% include './note.html' %}
+    {% endfor %}
+</section>
+{% endblock %}

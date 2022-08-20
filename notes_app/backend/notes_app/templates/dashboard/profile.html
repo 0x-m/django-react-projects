@@ -1,0 +1,55 @@
+{% extends './dashboard/dashboard.html' %}
+{% load static %}
+
+
+{% block title %}Notes{% endblock %}
+
+
+{% block content %}
+
+<section class="w-full  flex items-center flex-col  mt-4 h-full">
+    <form method="post" action="{% url 'notes:profile' %}"
+        class="p-6 text-gray-600 ss rounded-md  bg-white flex flex-col gap-4 m-4">
+        {% csrf_token %}
+        <label class="flex flex-col gap-1">
+            <span>Fisrt name:</span>
+            <input type="text" value="{{user.first_name}}"
+                class="p-2 rounded-md border focus:border-gray-500 outline-none" name="first_name" id="">
+        </label>
+        <label class="flex flex-col gap-1">
+            <span>Last name:</span>
+            <input type="text" value="{{user.last_name}}"
+                class="p-2 rounded-md border focus:border-gray-500 outline-none" name="last_name" id="">
+        </label>
+
+        <label class="flex flex-col gap-1">
+            <span>Email:</span>
+            <input type="email" value="{{user.email}}" class="p-2 rounded-md border focus:border-gray-500 outline-none"
+                name="email" id="">
+        </label>
+        <label class="flex flex-col gap-1">
+            <span>Avatar:</span>
+            <input type="file" class="p-2 rounded-md border focus:border-gray-500 outline-none" name="" id="">
+        </label>
+        <button type="submit" class="bg-sky-600 text-white p-2 rounded"
+            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">Save</button>
+
+    </form>
+    <form method="post" action="" class="p-6 -mt-1 text-gray-600 ss rounded-md  bg-white flex flex-col gap-4 m-4">
+        <label class="flex flex-col gap-1">
+            <span>New password:</span>
+            <input autocomplete="new-password" type="password"
+                class="p-2 rounded-md border focus:border-gray-500 outline-none" name="password1" id="">
+        </label>
+        <label class="flex flex-col gap-1">
+            <span>Confirm:</span>
+            <input type="password" autocomplete="new-password"
+                class="p-2 rounded-md border focus:border-gray-500 outline-none" name="password2" id="">
+        </label>
+        <button class="bg-red-600 text-white p-2 rounded"
+            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">Reset</button>
+    </form>
+    <section class="mt-4 p-2"></section>
+</section>
+</section>
+{% endblock %}

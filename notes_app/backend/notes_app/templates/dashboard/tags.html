@@ -1,0 +1,26 @@
+{% extends './dashboard/dashboard.html' %}
+{% load static %}
+
+{% block title %}Tags{% endblock %}
+
+
+{% block content %}
+<section class="w-full p-4 mt-16">
+    <form action="{% url 'notes:tags-add' %}" method="post" class="w-11/12 md:w-1/2 flex flex-col mx-auto rounded">
+        {% csrf_token %}
+        <input name="name" autofocus placeholder="Tag name" type="text"
+            class="p-3 text-gray-500 bg-white outline-none ss rounded">
+        <div class="flex mt-3  justify-end">
+            <button type="submit" class="bg-sky-600 shadow p-2 text-white px-4 rounded">Add</button>
+        </div>
+    </form>
+    <div class="w-11/12 md:w-3/4 mx-auto mt-16 text-gray-700 text-sm p-2 flex gap-2 flex-wrap">
+        {% for tag in tags %}
+        <div class="p-2 rounded-md flex items-center gap-2 w-fit bg-slate-100">
+            <span>{{ tag.name }}</span>
+            <a href="{% url 'notes:tags-delete' tag.id %}"><i class="bi-x text-lg"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

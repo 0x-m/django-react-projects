@@ -9,7 +9,7 @@ class Tag(models.Model):
     name = models.CharField(max_length=100, unique=True, db_index=True)
     class Meta:
         unique_together = ('user', 'name')
-    
+
     
     def __str__(self) -> str:
         return self.name
@@ -23,7 +23,7 @@ class Note(models.Model):
     due_date = models.DateTimeField(null=True, blank=True)
 
     def __str__(self) -> str:
-        return self.title
+        return  self.title
     
 
 

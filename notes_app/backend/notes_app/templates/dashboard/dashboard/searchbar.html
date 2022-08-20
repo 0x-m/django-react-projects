@@ -1,0 +1,25 @@
+<nav class="h-16 shadow p-2 flex justify-between bg-white w-full"
+    style="box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;">
+    <div class="flex gap-2 p-2 items-center group">
+        <button onclick="toggleMenu();">
+            <i class="bi-list text-2xl md:hidden text-gray-400"></i>
+        </button>
+        <form action="{% url 'notes:notes' %}" class="flex gap-1 text-lg items-center px-4">
+            <i class="bi-search group-focus-within:text-gray-600 text-gray-400"></i>
+            <input name="search" type="search" value="{{search}}"
+                class="outline-none group-focus-within:text-gray-600 p-2 w-full text-gray-500" placeholder="Search...">
+        </form>
+    </div>
+    <div class="flex gap-6 items-center px-3">
+        <div class="flex gap-2 items-center">
+            <div class="w-8 h-8 md:h-10 md:w-10 rounded-full border border-gray-400">
+                <img src="https://i.pravatar.cc/300" class="object-cover rounded-full" alt="">
+            </div>
+            <h6 class="text-gray-500 text-sm md:text-lg">{{user.username}}</h6>
+        </div>
+        <button class="relative">
+            <i class="bi-bell text-gray-500 text-xl md:text-2xl"></i>
+            <span class="h-2 w-2 rounded-full bg-red-500 absolute top-0 left-0.5"></span>
+        </button>
+    </div>
+</nav>
