@@ -14,8 +14,8 @@ from django.views.generic import CreateView, ListView, DeleteView, FormView, Upd
 from django.db.models import Q
 from django.urls import reverse_lazy
 from typing import *
-
-from .forms import AddTagForm, UpdateUserForm
+from django.http import HttpResponseNotAllowed
+from .forms import AddNoteForm, AddTagForm, UpdateUserForm
 from .models import *
 
 
@@ -36,7 +36,6 @@ class CreateUserView(FormView):
         
         return super().dispatch(request, *args, **kwargs)
     
-
 
 class UserLoginView(LoginView):
     template_name: str = 'users/login.html'
@@ -76,14 +75,24 @@ class NoteListView(ListView, LoginRequiredMixin):
         data['search'] = self.request.GET.get('search')
         return data
 
-# @login_required
-# def search(request: HttpRequest, keywords):
-#     notes &= request.user.notes.filter(Q(tags__name__icontains=keywords) 
-#                                   | Q(title__icontains=keywords) 
-#                                   | Q(body__icontains=keywords))
-#     return notes
+@login_required
+def add_note(request: HttpRequest, note_id=None):
+    if request.method == 'POST':
+        if note_id:
+            note = get_object_or_404(Note, note_id=note_id, user=request.user)
+        form = AddNoteForm(request.POST, instance=note)
+        if form.is_valid():
+            form.save()
+            return redirect('notes:notes')
+    return HttpResponseNotAllowed(['POST'])
 
-    
+
+@login_required
+def delete_note(request: HttpRequest, note_id):
+    note = get_object_or_404(Note, pk=note_id, user=request.user)
+    note.delete()
+    return redirect('notes:notes')
+
 
 class TagListView(ListView, LoginRequiredMixin):
     model = Tag

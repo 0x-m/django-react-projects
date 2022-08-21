@@ -9,7 +9,6 @@ def dashboard(request):
     return render(request, 'dashboard/notes.html')
 
 
-
 app_name = 'notes'
 urlpatterns = [
     path('signup/', CreateUserView.as_view(), name='signup'),

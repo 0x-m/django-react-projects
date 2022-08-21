@@ -26,9 +26,30 @@
     </head>
 
     <body class="h-screen w-screen relative">
-        <div class="absolute left-0 top-0 w-full h-screen " style="background-color: #eee5;">
-            <div class="w-11/12 mx-auto my-auto bg-white shadow">
-                sss
+        <div class="absolute  z-10 flex items-center justify-center left-0 top-0 w-full h-screen  "
+            style="background-color:#2228;">
+            <div class="w-11/12 md:w-1/2 rounded p-4  bg-white ss">
+                <form method="post" action="{% url 'notes:notes' %}" class="p-2 m-1 flex flex-col">
+                    <input name="title" placeholder="Title" type="text"
+                        class="p-1 outline-none text-lg text-gray-800 w-full">
+                    <textarea placeholder="Body..." name="body" id=""
+                        class="p-1 resize-none outline-none text-sm text-gray-600 w-full mt-2" cols="30"
+                        rows="5"></textarea>
+                    <section class="mt-2 w-full p-2  text-sm font-extrabold text-gray-800 flex gap-1 flex-wrap">
+                        {% for tag in user.tags.all %}
+                        <label class="select-none cursor-pointer p-2">
+                            <input type="checkbox" name="tags" value="{{tag.name}}" class="peer hidden"
+                                {% if tag.name in selected_tags %}checked{% endif %}>
+                            <span
+                                class="peer-checked:bg-sky-600 peer-checked:text-white p-2 rounded">{{tag.name}}</span>
+                        </label>
+                        {% endfor %}
+                    </section>
+
+                    <div class="flex justify-end mt-2 p-1">
+                        <button class="p-2 text-white bg-sky-500 px-4 rounded">Add</button>
+                    </div>
+                </form>
             </div>
         </div>
         <main class="relative flex h-screen w-full">
@@ -59,6 +80,10 @@
                 const menu = document.getElementById('menu');
                 event.stopPropagation();
                 menu.classList.toggle('onshow');
+            }
+
+            function addEditNote() {
+
             }
         </script>
     </body>
