@@ -1,12 +1,13 @@
-<article class="ss flex flex-col p-4 basis-1/4 bg-white rounded-sm shadow">
+<article onclick="editNote();" data-noteid="{{note.id}}"
+    class="ss cursor-pointer  flex flex-col p-4 basis-1/4 bg-white rounded-sm shadow">
     <span class="text-gray-400 text-xs">{{note.date_created}}</span>
-    <h4 class="text-gray-600 mt-2">{{note.title}}</h4>
-    <p class="text-xs text-gray-400 mt-4  ">
+    <h4 id="ss1" name="title" aria-label="title" class="text-gray-600 mt-2">{{note.title}}</h4>
+    <p name="body" aria-label="body" class="text-xs text-gray-400 mt-4  ">
         {{note.body}}
     </p>
-    <div class="flex gap-1 text-gray-500 text-[0.6rem] mt-4 flex-wrap">
+    <div name="tags" aria-label="tags" class="flex gap-1 text-gray-500 text-[0.6rem] mt-4 flex-wrap">
         {% for tag in note.tags.all %}
-        <span class="rounded-sm p-1 bg-gray-700 text-white">{{tag.name}}</span>
+        <span data-tagid="{{tag.id}}" class="rounded-sm p-1 bg-gray-700 text-white">{{tag.name}}</span>
         {% endfor %}
     </div>
 </article>

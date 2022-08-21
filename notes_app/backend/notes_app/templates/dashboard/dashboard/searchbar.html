@@ -6,7 +6,7 @@
         </button>
         <form action="{% url 'notes:notes' %}" class="flex gap-1 text-lg items-center px-4">
             <i class="bi-search group-focus-within:text-gray-600 text-gray-400"></i>
-            <input name="search" type="search" value="{{search}}"
+            <input name="search" type="search" value="{% if search %}{{search}}{% endif %}"
                 class="outline-none group-focus-within:text-gray-600 p-2 w-full text-gray-500" placeholder="Search...">
         </form>
     </div>

@@ -19,7 +19,7 @@ class Note(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
-    tags = models.ManyToManyField(to=Tag, related_name='tags')
+    tags = models.ManyToManyField(to=Tag, related_name='notes')
     due_date = models.DateTimeField(null=True, blank=True)
 
     def __str__(self) -> str:

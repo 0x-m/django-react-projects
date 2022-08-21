@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import  update_profile,AddTagView,UserProfileView ,CreateUserView, NoteListView, TagListView, UserLoginView, delete_tag, logout_user
+from .views import  delete_note, update_profile,AddTagView,UserProfileView ,CreateUserView, NoteListView, TagListView, UserLoginView, delete_tag, logout_user
 from django.shortcuts import render, redirect
 
 def dashboard(request):
@@ -16,6 +16,7 @@ urlpatterns = [
     path('logout', logout_user, name='logout'),
     path('profile', UserProfileView.as_view(), name='profile' ),
     path('notes/', NoteListView.as_view(), name='notes'),
+    path('notes/delete', delete_note, name='delete'),
     path('tags/', TagListView.as_view(), name='tags'),
     path('tags/add/', AddTagView.as_view(), name='tags-add'),
     path('tags/delete/<int:tag_id>/', delete_tag, name='tags-delete'),

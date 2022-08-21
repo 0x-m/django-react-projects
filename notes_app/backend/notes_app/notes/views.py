@@ -46,14 +46,31 @@ class UserLoginView(LoginView):
 
 def logout_user(request: HttpResponse):
     logout(request)
-    return HttpResponse('You logged out.')
+    return redirect('notes:login')
 
 
-class NoteListView(ListView, LoginRequiredMixin):
+class NoteListView(ListView,FormView, LoginRequiredMixin):
     model = Note
     template_name: str = 'dashboard/notes.html'
     paginate_by: int = 20
     context_object_name: Optional[str] = 'notes'
+    form_class = AddNoteForm
+    
+    def form_valid(self, form) -> HttpResponse:
+        print(form.cleaned_data)
+        note_id = self.request.POST.get('note_id')
+        if note_id:
+            note = get_object_or_404(Note, user=self.request.user, pk=note_id)
+            form.instance = note
+        
+        note = form.save(commit=False)
+        note.user = self.request.user
+        note.save()
+        form.save_m2m()
+        return redirect('notes:notes')
+    
+    def form_invalid(self, form) -> HttpResponse:
+        return HttpResponse(form.errors)
     
     def get_queryset(self):
         tags = self.request.GET.getlist('tags')
@@ -67,6 +84,7 @@ class NoteListView(ListView, LoginRequiredMixin):
                                   | Q(title__icontains=search_keywords) 
                                   | Q(body__icontains=search_keywords))
         return notes
+    
 
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
@@ -75,20 +93,11 @@ class NoteListView(ListView, LoginRequiredMixin):
         data['search'] = self.request.GET.get('search')
         return data
 
-@login_required
-def add_note(request: HttpRequest, note_id=None):
-    if request.method == 'POST':
-        if note_id:
-            note = get_object_or_404(Note, note_id=note_id, user=request.user)
-        form = AddNoteForm(request.POST, instance=note)
-        if form.is_valid():
-            form.save()
-            return redirect('notes:notes')
-    return HttpResponseNotAllowed(['POST'])
 
 
 @login_required
-def delete_note(request: HttpRequest, note_id):
+def delete_note(request: HttpRequest):
+    note_id = request.POST.get('note_id')
     note = get_object_or_404(Note, pk=note_id, user=request.user)
     note.delete()
     return redirect('notes:notes')
