@@ -1,5 +1,6 @@
 
 
+from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -15,8 +16,25 @@ SECRET_KEY = "django-insecure-^v3af38#873+=7pu&o4noo%7_=e7-a*)phne0!!svjll-vbf-d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+      'rest_framework.permissions.AllowAny' ,
+    ),
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    'PAGE_SIZE': 10,
+    "DEFAULT_FILTER_BACKENDS": [
+        'django_filters.rest_framework.DjangoFilterBackend'
+    ],
+}
 
 # Application definition
 
@@ -36,6 +54,7 @@ INSTALLED_APPS = [
     #3rd------------------
     "rest_framework",
     "rest_framework.authtoken",
+    'rest_framework_simplejwt',
     "django_filters",
     "corsheaders",
     "dj_rest_auth",
@@ -46,6 +65,13 @@ INSTALLED_APPS = [
 
     #---------------------
 ]
+
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=10),
+    
+}
 
 SITE_ID = 1
 

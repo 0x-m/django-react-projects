@@ -3,7 +3,7 @@ import './utils.css';
 function SimpleButton(props) {
     const classes = "text-white p-2 rounded " +
         (props.accent === 'error' ? "bg-red-600" : "bg-sky-600");
-    return (<button style={props.style} className={classes}>{props.children}</button>);
+    return (<button style={props.style} onClick={props.onClick} className={classes}>{props.children}</button>);
 }
 
 function TextField(props) {

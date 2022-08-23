@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 function SidebarItem(props) {
     return (
-        <div className="p-1 flex gap-2">
+        <Link to={props.to} className="p-1 flex gap-2">
             <i className={props.icon}></i>
             <span>{props.title}</span>
-        </div>
+        </Link>
     );
 }
 
@@ -17,11 +19,11 @@ function Sidebar(props) {
             </button>
             <h1 className="p-4 hidden md:block text-center text-white bg-gray-700 text-2xl">NOTES</h1>
             <div className="flex flex-col w-full p-8 text-white font-extrabold text-lg gap-2">
-                <SidebarItem title="Notes" icon="bi-table" />
-                <SidebarItem title="Tags" icon="bi-tags-fill" />
-                <SidebarItem title="Events" icon="bi-stopwatch-fill" />
-                <SidebarItem title="Profile" icon="bi-person-fill" />
-                <SidebarItem title="Logout" icon="bi-x-circle-fill" />
+                <SidebarItem to="notes" title="Notes" icon="bi-table" />
+                <SidebarItem to="tags" title="Tags" icon="bi-tags-fill" />
+                <SidebarItem to="events" title="Events" icon="bi-stopwatch-fill" />
+                <SidebarItem to="profile" title="Profile" icon="bi-person-fill" />
+                <SidebarItem to="logout" title="Logout" icon="bi-x-circle-fill" />
 
             </div>
             <ul className="p-2 flex justify-center items-center gap-4 text-white text-lg">
