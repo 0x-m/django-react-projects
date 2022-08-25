@@ -23,7 +23,7 @@ function Sidebar(props) {
                 <SidebarItem to="tags" title="Tags" icon="bi-tags-fill" />
                 <SidebarItem to="events" title="Events" icon="bi-stopwatch-fill" />
                 <SidebarItem to="profile" title="Profile" icon="bi-person-fill" />
-                <SidebarItem to="logout" title="Logout" icon="bi-x-circle-fill" />
+                <SidebarItem to="/logout" title="Logout" icon="bi-x-circle-fill" />
 
             </div>
             <ul className="p-2 flex justify-center items-center gap-4 text-white text-lg">

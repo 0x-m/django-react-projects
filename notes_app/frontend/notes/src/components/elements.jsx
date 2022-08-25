@@ -10,7 +10,7 @@ function TextField(props) {
     return (
         <label class="flex flex-col gap-1">
             <span>{props.label}</span>
-            <input type="text" placeholder={props.placeholder} value={props.value} onChange={props.onChange} className="p-2 rounded-md border focus:border-gray-500 outline-none" />
+            <input name={props.name} type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.onChange} className="p-2 rounded-md border focus:border-gray-500 outline-none" />
         </label>
     );
 }

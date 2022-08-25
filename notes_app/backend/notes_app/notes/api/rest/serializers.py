@@ -14,7 +14,7 @@ class NoteSerializer(serializers.ModelSerializer):
     tags_name = relations.StringRelatedField(many=True,source='tags', read_only=True)
     class Meta:
         model = Note
-        fields = ('title', 'body', 'date_created', 'due_date', 'tags', 'tags_name')
+        fields = ('id','title', 'body', 'date_created', 'due_date', 'tags', 'tags_name')
         extra_kwargs = {
             'date_created': {'read_only': True}
         }
