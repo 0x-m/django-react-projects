@@ -34,6 +34,13 @@ REST_FRAMEWORK = {
     "DEFAULT_FILTER_BACKENDS": [
         'django_filters.rest_framework.DjangoFilterBackend'
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TTILE": "Notes app",
+    "DESCRIPTION": "A simple Note keeping app",
+    "VERSION": "1.0.0"
 }
 
 # Application definition
@@ -62,6 +69,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "drf_spectacular",
 
     #---------------------
 ]
