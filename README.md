@@ -1,19 +1,18 @@
-#Introduction
-_Notes_ is a simple note keeping web application made with Django + React.js.
+# Introduction
+**Notes** is a simple note keeping web application made with Django and React.js.
 
-
-There are two general aproaches to building web applications today:
+There are two general approaches to building web applications today:
 **Traditional web application** and **Single Page Application(SPA)**, in this project I've tried to illustrate these two approaches by building a note app in both ways.
 
 
 Firstly, I have created a note app solely in Django with the following capabilities:
 
-1) The app has two models, **Note** an **Tag**.
-2) Each note has title and body and may have any number of tags. 
+1) The app has two models **Note** and **Tag**.
+2) Each note has a title and body and may have any number of tags. 
 3) Users can **add, edit or delete** their notes and also **add or delete** their tags.
-4) Each tag has a name which is unique among all user's tags (Thus, Two different users can have tags with the same name)
+4) Each tag has a name that is unique among all user's tags (Thus, Two different users can have tags with the same name)
 4) Users can search for a note and also filter their notes based on tags.
-5) The app has Singup and Login pages and a decent dashboard for managing the notes and tags.
+5) The app has Signup and Login pages and a decent dashboard for managing the notes and tags.
 
 
 In the second step, I've developed a set of RESTful API endpoints for user authentication and managing notes and tags with the help of **Django Rest Framework (Django DRF)**.
@@ -25,44 +24,44 @@ The API has the following specs:
 3) Good documentation and schema.
 
 The API schema is as follows:
-------------------------------------------------------
-/api/v1/users/registration - POST: register a new user
-/api/v1/token/ - POST: obtain a set of new Access and Refresh tokens
-/api/v1/token/refresh - POST: obtain a new Access token 
-/api/v1/notes - POST: Create a new note, GET: get the list of all user's notes (paginated)
-/api/v1/notes/<note_id> - DELETE: delete the note with id=note_id, PUT: Update the note
-/api/v1/tags - POST: Create a new tag, GET: get the list of all user's tags
-/api/v1/tags/<tag_id> - DELETE: delete the tag with id=tag_id, PUT: Update the tag
-------------------------------------------------------
+
+- /api/v1/users/registration (POST: register a new user)
+- /api/v1/token/ (POST: obtain a set of new Access and Refresh tokens)
+- /api/v1/token/refresh (POST: obtain a new Access token) 
+- /api/v1/notes  (POST: Create a new note, GET: get the list of all user's notes (paginated))
+- /api/v1/notes/<note_id> (DELETE: delete the note with id=note_id, PUT: Update the note)
+- /api/v1/tags (POST: Create a new tag, GET: get the list of all user's tags)
+- /api/v1/tags/<tag_id> (DELETE: delete the tag with id=tag_id, PUT: Update the tag)
 
 
-#Technologies
 
-Backend: Python Django + DRF, SQLite Postgresql
-Frontend: React.js
-Deployment: Gunicorn Heroku  Docker, Docker compose
-Other utilities:
-    **Open Schema**: API Automatic schema generator
-    **spectacular** : API Automatic document generator
-    **spinx**: for project documentation
-    **mypy**: for static type checking.
-    **pylint/black**: python linter and style guide enforcement.
-    **django_silk**: A library for profiling Django apps.
-    **venv**: for virtual environment.
-    **white_noise**: for serving static files.
-    **simple_jwt** : for implementing JWT Authentication
-    **allauth**: for social media authentication
-    **django_filters** : for implementing model filtering
-    **django-corsheaders**: CORS header manager
-    **pre-commit**
+# Technologies
+
+- Backend: Python Django + DRF, SQLite Postgresql
+- Frontend: React.js, tailwindcss
+- Deployment: Gunicorn Heroku  Docker, Docker compose
+- Other utilities:
+    - **Open Schema**: API Automatic schema generator
+    - **spectacular** : API Automatic document generator
+    - **spinx**: for project documentation
+    - **mypy**: for static type checking.
+    - **pylint/black**: python linter and style guide enforcement.
+    - **django_silk**: A library for profiling Django apps.
+    - **venv**: for virtual environment.
+    - **white_noise**: for serving static files.
+    - **simple_jwt** : for implementing JWT Authentication
+    - **allauth**: for social media authentication
+    - **django_filters** : for implementing model filtering
+    - **django-corsheaders**: CORS header manager
+    - **pre-commit**
 
 
-#Installation
-First approach:
-    1) Clone the repository:
+# Installation
+- First approach:
+    - Clone the repository:
         git clone ..
-    2) use toml file to create virtual env
-    3) install requirements:
+    - use toml file to create virtual env
+    - install requirements:
         for development:
             pip install -r requirements/dev.txt
         for proudction:
@@ -70,10 +69,10 @@ First approach:
     4) start the app:
         python  manage.py runserver
 
-Second approach:
+- Second approach:
 
 
-#Contribute
+# Contribute
 
 
-#License
+# License
