@@ -43,3 +43,6 @@ Prerequisites for this course:
     > we have a **classic Online shop** template and we are going to **migrate** to react.js.
 
 
+![modigami](https://github.com/0x-m/modigami_shop/blob/main/docs/img/modigami-index.png?raw=true)
+
+![modigami product](https://github.com/0x-m/modigami_shop/blob/main/docs/img/modigami-product.png?raw=true)
