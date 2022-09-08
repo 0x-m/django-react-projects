@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../../static/css/style.css">
+        <title>Document</title>
+    </head>
+
+    <body class="h-screen ">
+        <header></header>
+        <main class="flex">
+            <section
+                class="flex flex-col justify-between p-2 items-center bg-gray-800 basis-1/12 md:basis-1/5 h-screen">
+                <div class="flex items-center  mt-4 w-full  gap-2">
+                    <img src="./img/c.webp" class="rounded-full cover w-6 h-6 md:w-8 md:h-8" alt="">
+                    <h4 class="text-white text-md hidden md:block">MOhammad!</h4>
+
+                </div>
+                <ul class="list-none w-full md:w-3/4 text-white text-xl flex flex-col gap-4">
+                    <li
+                        class="flex gap-2 items-center  transition-all cursor-pointer border-b-2 border-transparent   hover:border-gray-300">
+                        <i class="bi-person text-xl"></i>
+                        <span class="hidden md:block">Profile</span>
+                    </li>
+                    <li
+                        class="flex gap-2 items-center  transition-all cursor-pointer border-b-2 border-transparent   hover:border-gray-300">
+                        <i class="bi-bag text-xl"></i>
+                        <span class="hidden md:block">Orders</span>
+                    </li>
+
+                    <li
+                        class="flex gap-2 items-center transition-all cursor-pointer border-b-2 border-transparent   hover:border-gray-300">
+                        <i class="bi-heart text-xl"></i>
+                        <span class="hidden md:block">Favorites</span>
+                    </li>
+                    <li
+                        class="flex gap-2 items-center transition-all cursor-pointer border-b-2 border-transparent   hover:border-gray-300">
+                        <i class="bi-chat text-xl"></i>
+                        <span class="hidden md:block">comments</span>
+                    </li>
+                    <li
+                        class="flex gap-2 items-center transition-all cursor-pointer border-b-2 border-transparent   hover:border-gray-300">
+                        <i class="bi-bell text-xl"></i>
+                        <span class="hidden md:block">Messages</span>
+                    </li>
+
+                </ul>
+                <div class="w-full flex justify-between">
+                    <a href="#" class="text-gray-200 hidden md:block">Go back to site</a>
+                    <div class="text-red-300 flex gap-2">
+                        <i class="bi-box-arrow-in-right"></i>
+                        <a href="#" class="hidden md:block">Logout</a>
+                    </div>
+                </div>
+            </section>
+            <section class="basis-11/12 overflow-auto h-screen md:basis-4/5 p-2 flex flex-col gap-2">
+                <section class="w-full md:w-4/5 mx-auto bg-gray-50 rounded-sm p-4">
+                    <h4 class="w-full text-center font-bold">
+                        Perosnal Information
+                    </h4>
+                    <div class="w-1/2 mx-auto md:w-1/5 h-0.5 bg-slate-300 mt-1"></div>
+                    <div class="flex flex-col md:flex-row">
+                        <form action="" class="flex flex-col gap-2 w-full mt-2 basis-1/2">
+                            <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                First name:
+                                <input
+                                    class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                    type="text" name="" id="">
+                            </label>
+                            <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                Last name:
+                                <input
+                                    class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                    type="text" name="" id="">
+                            </label>
+                            <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                E-mail:
+                                <input
+                                    class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                    type="text" name="" id="">
+                            </label>
+                            <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                Phone:
+                                <input
+                                    class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                    type="text" name="" id="">
+                            </label>
+                        </form>
+                        <div class="p-2 basis-1/2 mt-1 flex flex-col justify-center items-center">
+                            <div class="rounded-full border">
+                                <img src="./img/f.webp" class="object-cover rounded-full w-48 h-48" alt="">
+                            </div>
+                            <a href="#" class="text-blue-600 text-sm mt-1">change</a>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="w-full md:w-4/5 mx-auto bg-gray-50 rounded-sm p-4">
+                    <h4 class="w-full text-center font-bold">
+                        Addresses
+                    </h4>
+                    <div class="w-1/2 mx-auto md:w-1/5 h-0.5 bg-slate-300 mt-1"></div>
+                    <div class="mt-2 flex flex-col lg:flex-row gap-2 w-full">
+                        <form action="" class="flex flex-col gap-2 w-full mt-2 basis-1/2 order-2 lg:order-1">
+                            <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                First name:
+                                <input
+                                    class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                    type="text" name="" id="">
+                            </label>
+                            <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                Last name:
+                                <input
+                                    class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                    type="text" name="" id="">
+                            </label>
+                            <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                Phone:
+                                <input
+                                    class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                    type="text" name="" id="">
+                            </label>
+                            <div class="flex flex-col md:flex-row gap-2">
+                                <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                    State:
+                                    <input
+                                        class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                        type="text" name="" id="">
+                                </label>
+                                <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                    City:
+                                    <input
+                                        class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                        type="text" name="" id="">
+                                </label>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-2">
+                                <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                    town:
+                                    <input
+                                        class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                        type="text" name="" id="">
+                                </label>
+                                <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                    Postal code:
+                                    <input
+                                        class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                        type="text" name="" id="">
+                                </label>
+                            </div>
+                            <label for="" class="flex flex-col text-gray-800 gap-1 basis-1/2">
+                                Address description:
+                                <textarea
+                                    class="outline-none p-1 text-sm  border-gray-300 border rounded-sm  focus:border-gray-500"
+                                    rows="3" name="" id=""></textarea>
+                            </label>
+
+                            <button class="bg-gray-800 p-2 text-white w-full rounded-sm">
+                                Add
+                            </button>
+
+                        </form>
+                        <div class="flex flex-col gap-2 p-2 mt-6 basis-1/2 order-1 lg:order-2 ">
+                            <article class="bg-gray-100 p-1 w-full rounded flex justify-between">
+                                <h6 class="text-gray-800">abc/ccc/ddd/ee/..</h6>
+                                <button>
+                                    <i class="bi-trash text-red-700"></i>
+                                </button>
+                            </article>
+                            <article class="bg-gray-100 p-1 w-full rounded flex justify-between">
+                                <h6 class="text-gray-800">abc/ccc/ddd/ee/..</h6>
+                                <button>
+                                    <i class="bi-trash text-red-700"></i>
+                                </button>
+                            </article>
+
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+
+</html>

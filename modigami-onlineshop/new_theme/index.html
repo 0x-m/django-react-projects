@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../../static/css/style.css">
+        <title>Home page</title>
+        <style>
+            .hero {
+                background-image: url('https://source.unsplash.com/4nulm-JUYFo/2400x1600');
+                background-size: cover;
+                background-position: center;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+
+    <body class="min-h-screen flex flex-col">
+        <header class="hero w-full p-2 h-[50vh] md:h-[90vh]">
+            <nav class="flex justify-between w-full">
+                <h1 class="text-lg text-white">Modigami</h1>
+                <ul class="list-none flex gap-6 text-white">
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Blog</li>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Children</li>
+                </ul>
+                <ul class="flex gap-4 list-none text-white">
+                    <li>
+                        <i class="bi-bag"></i>
+                    </li>
+                    <li>
+                        <i class="bi-person"></i>
+                    </li>
+                    <li title="Search">
+                        <i class="bi-search"></i>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex flex-col gap-4">
+            <section>
+                <h1 class="text-2xl text-center mt-8">New Products</h1>
+                <h6 class="text-gray-400 text-center mt-1 text-xs">Our latest products...</h6>
+                <div class="w-11/12 md:w-3/5 grid mx-auto grid-cols-2 md:grid-cols-3 gap-4 mt-8 mb-8">
+                    <article>
+                        <div class="relative cursor-pointer group">
+                            <span class="absolute text-sm rounded-sm bg-red-500 text-white p-1 left-2 top-2">20%</span>
+                            <img src="./img/a.webp" class="object-cover rounded-sm w-full" alt="">
+                            <div
+                                class="w-full transition-all h-0 overflow-hidden group-hover:h-14 flex gap-2 justify-center items-center absolute bottom-0  left-0">
+                                <button class="bg-white p-1 shadow-md w-10 h-10 rounded-full">
+                                    <i class="bi-bag"></i>
+                                </button>
+                                <button class="bg-white p-1 shadow-md w-10 h-10  rounded-full">
+                                    <i class="bi-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-3 px-1">
+                            <h4 class="text-sm text-gray-500">Product name</h4>
+                            <div class="flex gap-1 text-xs text-yellow-500">
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 text-sm mt-2 pl-1 text-gray-500">
+                            <strong>2500$</strong>
+                            <del>3200$</del>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="relative cursor-pointer group">
+                            <span class="absolute text-sm rounded-sm bg-red-500 text-white p-1 left-2 top-2">20%</span>
+                            <img src="./img/b.webp" class="object-cover rounded-sm w-full" alt="">
+                            <div
+                                class="w-full transition-all h-0 overflow-hidden group-hover:h-14 flex gap-2 justify-center items-center absolute bottom-0  left-0">
+                                <button class="bg-white p-1 shadow-md w-10 h-10 rounded-full">
+                                    <i class="bi-bag"></i>
+                                </button>
+                                <button class="bg-white p-1 shadow-md w-10 h-10  rounded-full">
+                                    <i class="bi-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-3 px-1">
+                            <h4 class="text-sm text-gray-500">Product name</h4>
+                            <div class="flex gap-1 text-xs text-yellow-500">
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 text-sm mt-2 pl-1 text-gray-500">
+                            <strong>2500$</strong>
+                            <del>3200$</del>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="relative cursor-pointer group">
+                            <span class="absolute text-sm rounded-sm bg-red-500 text-white p-1 left-2 top-2">20%</span>
+                            <img src="./img/h.webp" class="object-cover rounded-sm w-full" alt="">
+                            <div
+                                class="w-full transition-all h-0 overflow-hidden group-hover:h-14 flex gap-2 justify-center items-center absolute bottom-0  left-0">
+                                <button class="bg-white p-1 shadow-md w-10 h-10 rounded-full">
+                                    <i class="bi-bag"></i>
+                                </button>
+                                <button class="bg-white p-1 shadow-md w-10 h-10  rounded-full">
+                                    <i class="bi-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-3 px-1">
+                            <h4 class="text-sm text-gray-500">Product name</h4>
+                            <div class="flex gap-1 text-xs text-yellow-500">
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 text-sm mt-2 pl-1 text-gray-500">
+                            <strong>2500$</strong>
+                            <del>3200$</del>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="relative cursor-pointer group">
+                            <span class="absolute text-sm rounded-sm bg-red-500 text-white p-1 left-2 top-2">20%</span>
+                            <img src="./img/d.webp" class="object-cover rounded-sm w-full" alt="">
+                            <div
+                                class="w-full transition-all h-0 overflow-hidden group-hover:h-14 flex gap-2 justify-center items-center absolute bottom-0  left-0">
+                                <button class="bg-white p-1 shadow-md w-10 h-10 rounded-full">
+                                    <i class="bi-bag"></i>
+                                </button>
+                                <button class="bg-white p-1 shadow-md w-10 h-10  rounded-full">
+                                    <i class="bi-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-3 px-1">
+                            <h4 class="text-sm text-gray-500">Product name</h4>
+                            <div class="flex gap-1 text-xs text-yellow-500">
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                                <i class="bi-star"></i>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 text-sm mt-2 pl-1 text-gray-500">
+                            <strong>2500$</strong>
+                            <del>3200$</del>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+            <section class="mt-8">
+                <h2 class="text-lg text-gray-600 text-center">Follow us on Instagram!</h2>
+                <h6 class="text-center text-xs mt-1 text-gray-400">Our latest posts on instagram</h6>
+                <div class="w-11/12 mx-auto mb-2 grid gap-2 grid-cols-3 md:grid-cols-5 mt-4">
+                    <article class="relative group cursor-pointer">
+                        <img src="./img/d.webp" class="w-32 h-32 md:w-64 md:h-64 object-cover" alt="">
+                        <div class="absolute left-0 top-0 w-full hidden items-center justify-center group-hover:flex h-full"
+                            style="background-color: #333a;">
+                            <i class="bi-instagram text-lg text-white "></i>
+                        </div>
+                    </article>
+                    <article class="relative group cursor-pointer">
+                        <img src="./img/f.webp" class="w-32 h-32 md:w-64 md:h-64 object-cover" alt="">
+                        <div class="absolute left-0 top-0 w-full hidden items-center justify-center group-hover:flex h-full"
+                            style="background-color: #333a;">
+                            <i class="bi-instagram text-lg text-white "></i>
+                        </div>
+                    </article>
+                    <article class="relative group cursor-pointer">
+                        <img src="./img/a.webp" class="w-32 h-32 md:w-64 md:h-64 object-cover" alt="">
+                        <div class="absolute left-0 top-0 w-full hidden items-center justify-center group-hover:flex h-full"
+                            style="background-color: #333a;">
+                            <i class="bi-instagram text-lg text-white "></i>
+                        </div>
+                    </article>
+                    <article class="relative group cursor-pointer">
+                        <img src="./img/c.webp" class="w-32 h-32 md:w-64 md:h-64 object-cover" alt="">
+                        <div class="absolute left-0 top-0 w-full hidden items-center justify-center group-hover:flex h-full"
+                            style="background-color: #333a;">
+                            <i class="bi-instagram text-lg text-white "></i>
+                        </div>
+                    </article>
+                    <article class="relative group cursor-pointer">
+                        <img src="./img/c.webp" class="w-32 h-32 md:w-64 md:h-64 object-cover" alt="">
+                        <div class="absolute left-0 top-0 w-full hidden items-center justify-center group-hover:flex h-full"
+                            style="background-color: #333a;">
+                            <i class="bi-instagram text-lg text-white "></i>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="mt-4 mb-4">
+                <h2 class="text-lg text-gray-700 text-center">Featured Products...</h2>
+                <h6 class="text-xs text-gray-500 text-center mt-1">Based on our customers attitude</h6>
+                <div class="w-full md:w-1/2 flex flex-col md:flex-row justify-between items-center mx-auto  gap-10">
+                    <div class="flex flex-col gap-2 mt-4">
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-4">
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-4">
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                        <article class="flex gap-3">
+                            <img src="./img/g.webp" class="w-16 h-16 object-cover" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-xs text-gray-600 ">Product name</h4>
+                                <div class="flex gap-1 text-xs text-yellow-500">
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                    <i class="bi-star"></i>
+                                </div>
+                                <strong class="text-xs text-gray-600">2400$</strong>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3 class="text-center text-gray-700 text-xl">Latest from our blog</h3>
+                <h6 class="text-center text-gray-400 text-xs mt-1">latest news from fashion world!</h6>
+                <div class="mt-8 mb-8 w-11/12 mx-auto grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <article>
+                        <img src="./img/a.webp" class="w-100 object-cover" alt="">
+                        <h4 class="text-gray-800 text-lg mt-2">Post Title</h4>
+                        <p class="text-xs text-left text-gray-400">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsam officia explicabo iste
+                            expedita, consequatur cupiditate sint voluptas suscipit a quos provident voluptate quidem
+                            cum
+                            deserunt quia soluta pariatur. Voluptatibus...<a class="mr-2 text-blue-400 underline"
+                                href="#">Visit</a>
+                        </p>
+                    </article>
+                    <article>
+                        <img src="./img/j.webp" class="w-100 object-cover" alt="">
+                        <h4 class="text-gray-800 text-lg mt-2">Post Title</h4>
+                        <p class="text-xs text-left text-gray-400">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsam officia explicabo iste
+                            expedita, consequatur cupiditate sint voluptas suscipit a quos provident voluptate quidem
+                            cum
+                            deserunt quia soluta pariatur. Voluptatibus...<a class="mr-2 text-blue-400 underline"
+                                href="#">Visit</a>
+                        </p>
+                    </article>
+                    <article>
+                        <img src="./img/c.webp" class="w-100 object-cover" alt="">
+                        <h4 class="text-gray-800 text-lg mt-2">Post Title</h4>
+                        <p class="text-xs text-left text-gray-400">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsam officia explicabo iste
+                            expedita, consequatur cupiditate sint voluptas suscipit a quos provident voluptate quidem
+                            cum
+                            deserunt quia soluta pariatur. Voluptatibus...<a class="mr-2 text-blue-400 underline"
+                                href="#">Visit</a>
+                        </p>
+                    </article>
+                    <article>
+                        <img src="./img/d.webp" class="w-100 object-cover" alt="">
+                        <h4 class="text-gray-800 text-lg mt-2">Post Title</h4>
+                        <p class="text-xs text-left text-gray-400">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsam officia explicabo iste
+                            expedita, consequatur cupiditate sint voluptas suscipit a quos provident voluptate quidem
+                            cum
+                            deserunt quia soluta pariatur. Voluptatibus...<a class="mr-2 text-blue-400 underline"
+                                href="#">Visit</a>
+                        </p>
+                    </article>
+                    <article>
+                        <img src="./img/b.webp" class="w-100 object-cover" alt="">
+                        <h4 class="text-gray-800 text-lg mt-2">Post Title</h4>
+                        <p class="text-xs text-left text-gray-400">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsam officia explicabo iste
+                            expedita, consequatur cupiditate sint voluptas suscipit a quos provident voluptate quidem
+                            cum
+                            deserunt quia soluta pariatur. Voluptatibus...<a class="mr-2 text-blue-400 underline"
+                                href="#">Visit</a>
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+        </main>
+        <footer class="w-full h-72 bg-gray-900"></footer>
+    </body>
+
+</html>

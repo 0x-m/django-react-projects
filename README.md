@@ -25,6 +25,8 @@ Prerequisites for this course:
 
     In this project, I've tried to illustrate and compare these two approaches.
 
+    ![Note app](https://github.com/0x-m/django-react-projects/blob/main/notes_app/docs/img/notes-notelist.png?raw=true)
+
     Initially, we build a simple **Note keeping app** solely with django (in tradtional way, using django views and templates). 
     
     Then,  A set of REST API endpoints (for authentication and note managing) will be developed.
