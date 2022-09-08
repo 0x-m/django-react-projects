@@ -1,78 +1,43 @@
 # Introduction
-**Notes** is a simple note keeping web application made with Django and React.js.
 
-There are two general approaches to building web applications today:
-**Traditional web application** and **Single Page Application(SPA)**, in this project I've tried to illustrate these two approaches by building a note app in both ways.
+This repository contains all project that we are going to build in my **Django REST Framework + React.js + tailwindcss tutorial** course. it's videos soon will be availabe!
 
+Prerequisites for this course:
+- Familiarity with python and django.
+- Basic understanding of HTML, CSS, and JS.
 
-Firstly, I have created a note app solely in Django with the following capabilities:
+# List of projects
 
-1) The app has two models **Note** and **Tag**.
-2) Each note has a title and body and may have any number of tags. 
-3) Users can **add, edit or delete** their notes and also **add or delete** their tags.
-4) Each tag has a name that is unique among all user's tags (Thus, Two different users can have tags with the same name)
-4) Users can search for a note and also filter their notes based on tags.
-5) The app has Signup and Login pages and a decent dashboard for managing the notes and tags.
+- ## Poll REST API
+    In this project we will learn the basics of Django REST Framework (DRF) including:
+    - DRF building blocks (Serializer, Parser, Render, APIView, Filters, Router,...).
+    - Writing Unit tests.
+    - API Documentation and its tools.
 
+- ## Todo App
+    A simple **todo app REST API** that is designed with Django + Django REST framework.
+    A simple **SPA** that consumes our todo apis. 
 
-In the second step, I've developed a set of RESTful API endpoints for user authentication and managing notes and tags with the help of **Django Rest Framework (Django DRF)**.
+- ## Note keeping app
+    As you may arleady know, there are two general approaches to building web applications today:
+    - Traditional web application.
+    - Single page application (SPA).
 
-The API has the following specs:
+    In this project, I've tried to illustrate and compare these two approaches.
 
-1) JWT for authentication (authorization)
-2) Authentication via some social media account (Gmail for example)
-3) Good documentation and schema.
+    Initially, we build a simple **Note keeping app** solely with django (in tradtional way, using django views and templates). 
+    
+    Then,  A set of REST API endpoints (for authentication and note managing) will be developed.
 
-The API schema is as follows:
+    And finally, we will design a **SPA** for the Note keeping app using **react.js** .
+  
+- ## Blog REST API
 
-- /api/v1/users/registration (POST: register a new user)
-- /api/v1/token/ (POST: obtain a set of new Access and Refresh tokens)
-- /api/v1/token/refresh (POST: obtain a new Access token) 
-- /api/v1/notes  (POST: Create a new note, GET: get the list of all user's notes (paginated))
-- /api/v1/notes/<note_id> (DELETE: delete the note with id=note_id, PUT: Update the note)
-- /api/v1/tags (POST: Create a new tag, GET: get the list of all user's tags)
-- /api/v1/tags/<tag_id> (DELETE: delete the tag with id=tag_id, PUT: Update the tag)
+- ## Online Shop SPA
 
+    In this step, we are going to discuss about the **React.js** as a tool that improves 
+    the **code quality** (Readability, Maintainablity, Reusability).
 
-
-# Technologies
-
-- Backend: Python Django + DRF, SQLite Postgresql
-- Frontend: React.js, tailwindcss
-- Deployment: Gunicorn Heroku  Docker, Docker compose
-- Other utilities:
-    - **Open Schema**: API Automatic schema generator
-    - **spectacular** : API Automatic document generator
-    - **spinx**: for project documentation
-    - **mypy**: for static type checking.
-    - **pylint/black**: python linter and style guide enforcement.
-    - **django_silk**: A library for profiling Django apps.
-    - **venv**: for virtual environment.
-    - **white_noise**: for serving static files.
-    - **simple_jwt** : for implementing JWT Authentication
-    - **allauth**: for social media authentication
-    - **django_filters** : for implementing model filtering
-    - **django-corsheaders**: CORS header manager
-    - **pre-commit**
+    > we have a **classic Online shop** template and we are going to **migrate** to react.js.
 
 
-# Installation
-- First approach:
-    - Clone the repository:
-        git clone ..
-    - use toml file to create virtual env
-    - install requirements:
-        for development:
-            pip install -r requirements/dev.txt
-        for proudction:
-            pip install -r requirements/prod.txt
-    4) start the app:
-        python  manage.py runserver
-
-- Second approach:
-
-
-# Contribute
-
-
-# License
