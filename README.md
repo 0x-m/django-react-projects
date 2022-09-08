@@ -1,3 +1,6 @@
+[![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)
+ [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html) [![python version](https://img.shields.io/badge/Python-3.7-green.svg)](https://shields.io/) [![tailwind](https://img.shields.io/badge/tailwindcss-blue.svg)](http://perso.crans.org/besson/LICENSE.html) [![django version](https://img.shields.io/badge/Django-4.0-green.svg)](https://shields.io/) [![reacjs](https://img.shields.io/badge/reacjs-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+
 # Introduction
 
 This repository contains all project that we are going to build in my **Django REST Framework + React.js + tailwindcss tutorial** course. it's videos soon will be availabe!
